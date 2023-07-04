@@ -45,7 +45,7 @@ Az adatfeldolgozásnál a dátumot a megfelelő formátumra kellett hozni, hogy 
 
 
 Az 5. Oszloptól az adatsor végéig csak a dátumok voltak, ezeket kitettem egy date\_strings-be, 
-majd a format változóba megadtam a dátumok formátumát. Ezután a dates-be beleraktuk a dátumokat a megfelelő formátumban, hozzáadva 2000-et, hogy olvashatóbbak legyenek. 
+majd a format változóba megadtam a dátumok formátumát. Ezután a dates-be beleraktam a dátumokat a megfelelő formátumban, hozzáadva 2000-et, hogy olvashatóbbak legyenek. 
 
 A vizualizáció során haszáltam plot,bar,scratter vizualizációs elemeket.
 
@@ -69,4 +69,3 @@ A vizualizáció során haszáltam plot,bar,scratter vizualizációs elemeket.
 
 ![](Aspose.Words.9b9cc0c9-fffb-42af-86ec-e912d909d72b.006.png)
 
- Az elemzésem során elsajátítottam a Julia nyelv alapjait, valamint a leggyakoribb, az adatelemzéshez szükséges csomagokat.
