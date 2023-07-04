@@ -35,11 +35,13 @@ Ezen adatok feldolgozásával és néhány vizualizációért felelős könyvtá
 
 Az adatfeldolgozásnál a dátumot a megfelelő formátumra kellett hozni, hogy aztán könnyebben dolgozhassak vele, mivel az adatsorban csak az évszámnak a vége volt benne. Pl. a 2012 csak 12-ként volt jelen. Ezt a problémát a  a következő kódrészlettel tudtam megoldani.
 
-date\_strings = String.(names(data))[5:end] 
 
-format = Dates.DateFormat("m/d/Y")
 
-dates = parse.(Date, date\_strings, format) + Year(2000)
+```julia
+ date_strings = String.(names(data))[5:end]
+ format = Dates.DateFormat("m/d/Y") 
+ dates = parse.(Date, date_strings, format) + Year(2000) 
+```
 
 
 Az 5. Oszloptól az adatsor végéig csak a dátumok voltak, ezeket kitettem egy date\_strings-be, 
@@ -67,4 +69,4 @@ A vizualizáció során haszáltam plot,bar,scratter vizualizációs elemeket.
 
 ![](Aspose.Words.9b9cc0c9-fffb-42af-86ec-e912d909d72b.006.png)
 
- Az elemzésem során elsajátítottam a Julia nyelv alapjait, valamint a leggyakoribb, az adatelemzéshez szükséges bővítményeket.
+ Az elemzésem során elsajátítottam a Julia nyelv alapjait, valamint a leggyakoribb, az adatelemzéshez szükséges csomagokat.
