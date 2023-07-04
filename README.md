@@ -1,4 +1,4 @@
-﻿COVID-19 ADATOK ELEMZÉSE – JULIA
+﻿# COVID-19 ADATOK ELEMZÉSE – JULIA
 
 Ebben a feladatban a koronavírusra vonatkozó adatokat vizsgálom meg és elemzem a Julia programnyelv segítségével. 
 
@@ -7,33 +7,31 @@ Az adatokat a következő forrásból merítettem:
 
 Ezen adatok feldolgozásával és néhány vizualizációért felelős könyvtár használatával egészen látványos elemzéseket sikerült létrehoznom.
 
-Az adatok feldolgozása után egy ilyen adatsort kaptam: 
+## Az adatok feldolgozása után egy ilyen adatsort kaptam: 
 
-![A screenshot of a computer
-
-Description automatically generated with low confidence](Aspose.Words.9b9cc0c9-fffb-42af-86ec-e912d909d72b.001.png)
+![](Aspose.Words.9b9cc0c9-fffb-42af-86ec-e912d909d72b.001.png)
 
 
 
-Az elemzésem során ezeket a csomagokat használtam:
+## Az elemzésem során ezeket a csomagokat használtam:
 
-using Distributions
+* using Distributions
 
-using StatsBase
+* using StatsBase
 
-using CSV
+* using CSV
 
-using DataFrames
+* using DataFrames
 
-using StatsPlots
+* using StatsPlots
 
-using Plots
+* using Plots
 
-gr()
+* gr()
 
-using Dates
+* using Dates
 
-using Statistics
+* using Statistics
 
 Az adatfeldolgozásnál a dátumot a megfelelő formátumra kellett hozni, hogy aztán könnyebben dolgozhassak vele, mivel az adatsorban csak az évszámnak a vége volt benne. Pl. a 2012 csak 12-ként volt jelen. Ezt a problémát a  a következő kódrészlettel tudtam megoldani.
 
@@ -49,24 +47,24 @@ majd a format változóba megadtam a dátumok formátumát. Ezután a dates-be b
 
 A vizualizáció során haszáltam plot,bar,scratter vizualizációs elemeket.
 
-Először kimutattam az US Covid esetszámokat vonaldiagramon. Ezek a következőképpen alakultak:
+## Először kimutattam az US Covid esetszámokat vonaldiagramon. Ezek a következőképpen alakultak:
 
 ![](Aspose.Words.9b9cc0c9-fffb-42af-86ec-e912d909d72b.002.png)
 
-Majd ugyanezzel az adatokkal egy bar plot-ban is megjelenítettem őket:
+## Majd ugyanezzel az adatokkal egy bar plot-ban is megjelenítettem őket:
 
 ![](Aspose.Words.9b9cc0c9-fffb-42af-86ec-e912d909d72b.003.png)
 
-A következő lépésben kíváncsi voltam arra, hogy Andorrában hogyan alakultak az esetszámok:
+## A következő lépésben kíváncsi voltam arra, hogy Andorrában hogyan alakultak az esetszámok:
 
 ![](Aspose.Words.9b9cc0c9-fffb-42af-86ec-e912d909d72b.004.png)
 
-Az US adatokat napi szinten is lebontottam, amelyek a következőképpen alakultak:
+## Az US adatokat napi szinten is lebontottam, amelyek a következőképpen alakultak:
 
 ![](Aspose.Words.9b9cc0c9-fffb-42af-86ec-e912d909d72b.005.png)
 
-A napi adatokra rátettem a heti átlag fertőzésszámot:
+## A napi adatokra rátettem a heti átlag fertőzésszámot:
 
 ![](Aspose.Words.9b9cc0c9-fffb-42af-86ec-e912d909d72b.006.png)
 
-Az elemzésem során elsajátítottam a Julia nyelv alapjait, valamint a leggyakoribb, az adatelemzéshez szükséges bővítményeket.
+ Az elemzésem során elsajátítottam a Julia nyelv alapjait, valamint a leggyakoribb, az adatelemzéshez szükséges bővítményeket.
