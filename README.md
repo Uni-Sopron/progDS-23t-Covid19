@@ -69,3 +69,19 @@ A vizualizáció során haszáltam plot,bar,scratter vizualizációs elemeket.
 
 ![](Aspose.Words.9b9cc0c9-fffb-42af-86ec-e912d909d72b.006.png)
 
+## Írtam egy függvényt, amely egy adott ország megadásával kimutatja az esetszámokat egy line plot segítségével:
+
+```
+function plot_cases_by_country(country)
+
+    country_data = filter(row -> row.country == country, data_2)
+    cases = Matrix{Union{Missing, Int64}}(country_data[:, 5:end])
+    cases = cases'
+    plot(dates, cases, xlabel = "Date", ylabel = "Cases", label = country, legend = :topleft)
+end
+
+plot_cases_by_country("Hungary")
+
+
+```
+
