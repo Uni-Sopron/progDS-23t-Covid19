@@ -72,3 +72,15 @@ running_mean = [mean(daily_cases[i-6:i]) for i in 7:length(daily_cases)]
 plot(daily_cases,label="raw daily cases")
 plot!(running_mean, m=:o, label = "running weekly mean",leg=:topleft, xlabel="days",ylabel="Weekly mean",title="Weekly mean cases in US")
 
+
+function plot_cases_by_country(country)
+    
+    country_data = filter(row -> row.country == country, data_2)
+    cases = Matrix{Union{Missing, Int64}}(country_data[:, 5:end])
+    cases = cases'
+    plot(dates, cases, xlabel = "Date", ylabel = "Cases", label = country, legend = :topleft)
+
+end
+
+plot_cases_by_country("Hungary")
+
